@@ -20,7 +20,7 @@ if ($conn -> connect_error) {
 	$sql = "SELECT 1 FROM teacher WHERE email = '$email' AND password = '$password'";
 	$result = mysqli_query($conn, $sql);
 	
-	if ($result -> num_rows == 1) {
+	if ($result->num_rows == 1) {
 		$row = $result->fetch_assoc();
 		session_start();
 		$_SESSION["id"] = $result['teacher_id'];
