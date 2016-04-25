@@ -56,7 +56,7 @@ start_session();
                             <input type="text" name="number_students" id="number_students" required="required">
                         </div>
                         <div id="teacher_id" class="field f_100 ui-resizable-disabled ui-state-disabled">
-                            <input type="hidden" name="teacher_id" id="teacherid" value="<?php $_session['teacher_id']?> ">
+                            <input type="hidden" name="teacher_id" id="teacherid" value="<?php echo $_session['teacher_id']; ?> ">
                         </div>
 
                         <div id="form-submit" class="field f_100 clearfix submit">
