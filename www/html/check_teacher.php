@@ -23,11 +23,11 @@ if ($conn -> connect_error) {
 	if ($result->num_rows == 1) {
 		$row = $result->fetch_assoc();
 		session_start();
-		$_SESSION["id"] = $result['teacher_id'];
-		$_SESSION["first_name"] = $result['first_name'];
-		$_SESSION["last_name"] = $result['last_name'];
-		$_SESSION["subject"] = $result['subject'];
-		$_SESSION["email"] = $result['email'];
+		$_SESSION["id"] = $row['teacher_id'];
+		$_SESSION["first_name"] = $row['first_name'];
+		$_SESSION["last_name"] = $row['last_name'];
+		$_SESSION["subject"] = $row['subject'];
+		$_SESSION["email"] = $row['email'];
 		header("Location:teacher_portal.html");
 	 } else {
 		header("Location:login.html");	 
