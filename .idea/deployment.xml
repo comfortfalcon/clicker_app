@@ -5,7 +5,7 @@
       <paths name="derekanesmith.com">
         <serverdata>
           <mappings>
-            <mapping deploy="/var/www/html" local="$PROJECT_DIR$/www/html" web="/var/www/html " />
+            <mapping deploy="/var/www/html" local="$PROJECT_DIR$/www/html" web="/var/www/html" />
           </mappings>
         </serverdata>
       </paths>

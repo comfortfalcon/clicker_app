@@ -28,7 +28,12 @@ if ($conn -> connect_error) {
 		$_SESSION["last_name"] = $row['last_name'];
 		$_SESSION["subject"] = $row['subject'];
 		$_SESSION["email"] = $row['email'];
-		header("Location:teacher_portal.html");
+		echo $_SESSION["id"];
+		echo $_SESSION["first_name"];
+		echo $_SESSION["last_name"];
+		echo $_SESSION["subject"];
+		echo $_SESSION["email"];
+		//header("Location:teacher_portal.html");
 	 } else {
 		header("Location:login.html");	 
 		echo "<script type='text/javascript'>alert('NOT FOUND, PLEASE TRY AGAIN')</script>";
