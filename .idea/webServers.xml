@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d1243600-2363-4bb2-b13d-e4417a991f23" name="derekanesmith.com" url="http://derekanesmith.com">
+        <fileTransfer host="derekanesmith.com" port="22" privateKey="C:\Users\dks560\Documents\private.ppk" accessType="SFTP" username="root" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

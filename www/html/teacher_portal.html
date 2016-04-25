@@ -15,6 +15,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <!--[if lte IE 9]>
     <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
 </head>
+
+<?php
+
+start_session();
+
+>
 <body>
 <div id="page-wrapper">
     <div id="header-wrapper">
@@ -23,9 +29,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <div class="12u">
 
                     <header id="header">
-                        <h1><a href="#" id="logo">Teacher Portal</a></h1>
+                        <h1><a href="#" id="logo" class="current-page-item">Teacher Portal</a></h1>
                         <nav id="nav">
-                            <a href="index.html" class="current-page-item">Homepage</a>
+                            <a href="index.html">Homepage</a>
                             <a href="login.html">Login</a>
                             <a href="sign_up.html">Sign up</a>
                             <a href="portal.html">Student Portal</a>
@@ -35,24 +41,32 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             </div>
         </div>
     </div>
-    <div class="6u">
-    <div id="class_insert">
-        <form action="insert_class.php" method="post"
-              novalidate="">
-            <div id="class_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
-                <label for="class"> Class Name: </label>
-                <input type="text" name="class" id="class" required="required">
+    <div class="container">
+        <div class="row">
+            <div class="6u">
+                <div id="class_insert">
+                    <form action="add_class.php" method="post"
+                          novalidate="">
+                        <div id="class_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
+                            <label for="class"> Class Name: </label>
+                            <input type="text" name="class" id="class" required="required">
+                        </div>
+                        <div id="num_students" class="field f_100 ui-resizable-disabled ui-state-disabled">
+                            <label for="number_students"> Number of Students: </label>
+                            <input type="text" name="number_students" id="number_students" required="required">
+                        </div>
+                        <div id="teacher_id" class="field f_100 ui-resizable-disabled ui-state-disabled">
+                            <input type="hidden" name="teacher_id" id="teacherid" value="<?php $_session['teacher_id']?> ">
+                        </div>
+
+                        <div id="form-submit" class="field f_100 clearfix submit">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div id="num_students" class="field f_100 ui-resizable-disabled ui-state-disabled">
-                <label for="number_students"> Number of Students: </label>
-                <input type="text" name="number_students" id="number_students" required="required">
-            </div>
-            <div id="form-submit" class="field f_100 clearfix submit">
-                <input type="submit" value="Submit">
-            </div>
-        </form>
+        </div>
     </div>
-</div>
 </div>
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
