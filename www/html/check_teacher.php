@@ -21,6 +21,13 @@ if ($conn -> connect_error) {
 	$result = mysqli_query($conn, $sql);
 	
 	if ($result -> num_rows == 1) {
+		$row = $result->fetch_assoc();
+		session_start();
+		$_SESSION["id"] = $result['teacher_id'];
+		$_SESSION["first_name"] = $result['first_name'];
+		$_SESSION["last_name"] = $result['last_name'];
+		$_SESSION["subject"] = $result['subject'];
+		$_SESSION["email"] = $result['email'];
 		header("Location:teacher_portal.html");
 	 } else {
 		header("Location:login.html");	 
