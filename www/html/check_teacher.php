@@ -17,18 +17,21 @@ if ($conn -> connect_error) {
 }
 
 	
-	$sql = "SELECT 1 FROM teacher WHERE email = '$email' AND password = '$password'";
+	$sql = "SELECT * FROM teacher";
 	$result = mysqli_query($conn, $sql);
 	
-	if ($result->num_rows == 1) {
-		$row = $result->fetch_assoc();
-		session_start();
-		$_SESSION["id"] = $row['teacher_id'];
-		$_SESSION["first_name"] = $row['first_name'];
-		$_SESSION["last_name"] = $row['last_name'];
-		$_SESSION["subject"] = $row['subject'];
-		$_SESSION["email"] = $row['email'];
-		header("Location:teacher_portal.html");
+	if ($result->num_rows > 0) {
+		while ($row = $result->fetch_assoc()) {
+			if ($row['email'] == $email && $row['password'] == $password) {
+				session_start();
+				$_SESSION["id"] = $row['teacher_id'];
+				$_SESSION["first_name"] = $row['first_name'];
+				$_SESSION["last_name"] = $row['last_name'];
+				$_SESSION["subject"] = $row['subject'];
+				$_SESSION["email"] = $row['email'];
+				header("Location:teacher_portal.html");
+			}
+		}
 	 } else {
 		header("Location:login.html");	 
 		echo "<script type='text/javascript'>alert('NOT FOUND, PLEASE TRY AGAIN')</script>";
