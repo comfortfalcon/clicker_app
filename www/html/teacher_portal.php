@@ -97,6 +97,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <input type="submit" value="Submit">
                     </div>
                 </form>
+                <button onclick="makeid()">Start Session</button>
             </div>
         </div>
     </div>
@@ -109,6 +110,17 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <!--[if lte IE 8]>
 <script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
+<script>
+    function makeid()
+    {
+        var text = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+        for( var i=0; i < 4; i++ )
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+        window.location.href = "http://derekanesmith.com/start_session.php?name=" + text;
+        return text;
+    }
+</script>
 </body>
 </html>
