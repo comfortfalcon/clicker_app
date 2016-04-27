@@ -24,7 +24,7 @@ if ($conn -> connect_error) {
 		while ($row = $result->fetch_assoc()) {
 			if ($row['email'] == $email && $row['password'] == $password) {
 				session_start();
-				$_SESSION["id"] = $row['teacher_id'];
+				$_SESSION["teacher_id"] = $row['teacher_id'];
 				$_SESSION["first_name"] = $row['first_name'];
 				$_SESSION["last_name"] = $row['last_name'];
 				$_SESSION["subject"] = $row['subject'];
