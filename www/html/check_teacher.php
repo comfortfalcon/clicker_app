@@ -29,7 +29,7 @@ if ($conn -> connect_error) {
 				$_SESSION["last_name"] = $row['last_name'];
 				$_SESSION["subject"] = $row['subject'];
 				$_SESSION["email"] = $row['email'];
-				header("Location:teacher_portal.html");
+				header("Location:teacher_portal.php");
 			}
 		}
 	 } else {

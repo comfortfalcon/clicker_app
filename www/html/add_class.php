@@ -8,7 +8,7 @@
 <?php
 
 
-session_start();
+start_session();
 
 
 $servername = "localhost";
@@ -30,14 +30,15 @@ $teacher_id = $_SESSION["teacher_id"];
 $id = uniqid();
 
 $_SESSION["class_id"] = $id;
+$_SESSION["class_name"] = $class2;
 
 $sql = "INSERT INTO class(teacher_id, class_id, class_name, number_students) 
 		VALUES ('$teacher_id', '$id', '$class2', '$num_student')";
 
 if ($conn->query($sql) === TRUE) {
-    header("Location:teacher_portal.html");
+    header("Location:teacher_portal.php");
 } else {
-    header("Location:teacher_portal.html");
+    header("Location:teacher_portal.php");
 }
 
 ?>

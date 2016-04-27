@@ -1,10 +1,9 @@
 
 <?php
 
-ini_set('display_errors', 'On');
-error_reporting(E_ALL);
 
-session_start();
+
+start_session();
 
 $servername = "localhost";
 $username = "root";
@@ -27,15 +26,16 @@ $room_code = 1234;
 
 
 $_SESSION["set_id"] = $set_id;
+$_SESSION["set_name"] = $set_name;
 
 $sql = "INSERT INTO set_name(class_id, set_id, set_name, number_questions, room_code) 
 		VALUES ('$class_id', '$set_id', '$set_name', '$num_questions', '$room_code')";
 
 if ($conn->query($sql) === TRUE) {
-    header("Location:teacher_portal.html");
+    header("Location:teacher_portal.php");
 } else {
     echo mysql_errno($conn);
-   //header("Location:teacher_portal.html");
+   //header("Location:teacher_portal.php");
     echo $set_name;
     echo $set_id;
     echo $class_id;

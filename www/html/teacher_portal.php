@@ -15,12 +15,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <!--[if lte IE 9]>
     <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
 </head>
-
-<?php
-
-echo $_SESSION['teacher_id'];
-?>
 <body>
+<?php session_start(); ?>
 <div id="page-wrapper">
     <div id="header-wrapper">
         <div class="container">
@@ -44,6 +40,10 @@ echo $_SESSION['teacher_id'];
         <div class="row">
             <div class="6u">
                 <div id="class_insert">
+                    <div id="class_display>
+                        <p>Current Class :   </p>
+                        <?php echo $_SESSION["class_name"]; ?>
+                    </div>
                     <form action="add_class.php" method="post"
                           novalidate="">
                         <div id="class_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
@@ -75,6 +75,24 @@ echo $_SESSION['teacher_id'];
                     <div id="form_submit" class="field f_100 clearfix submit">
                         <input type="submit" value="Submit">
                     </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="6u">
+                <form action="add_question.php" method="post"
+                      novalidate="">
+                    <div id="question_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
+                        <label for="question_name">Question: </label>
+                        <input type="text" name="question" id="question" required="required">
+                        </div>
+                    <div id="q_answer" class="field f_100 ui-resizable-disabled ui-state-disabled">
+                        <label for="q_answer">Answer: </label>
+                        <input type="text" name="answer" id="answer" required="required">
+                        </div>
+                    <div id="q_form_submit"  class="field f_100 clearfix submit">
+                        <input type="submit" value="Submit">
+                        </div>
                 </form>
             </div>
         </div>
