@@ -39,11 +39,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     </div>
     <div class="container">
         <div class="row">
+            <p>Current Teacher : <?php echo $_SESSION["first_name"]; ?>  </p>
             <div class="6u">
                 <div id="class_insert">
                     <div id="class_display">
-                        <p>Current Class :   </p>
-                        <?php echo $_SESSION["class_name"]; ?>
+                        <p>Current Class : <?php echo $_SESSION["class_name"]; ?>  </p>
+                        
                     </div>
                     <form action="add_class.php" method="post"
                     novalidate="">
@@ -63,6 +64,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 </div>
             </div>
             <div id="6u">
+                <p>Current Set : <?php echo $_SESSION["set_name"]; ?>  </p>
                 <form action="add_set.php" method="post"
                       novalidate="">
                     <div id="set_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
