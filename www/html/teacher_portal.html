@@ -61,6 +61,19 @@ echo $_SESSION['teacher_id'];
                     </form>
                 </div>
             </div>
+            <div id="6u">
+                <form action="add_set.php" method="post"
+                      novalidate="">
+                    <div id="set_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
+                        <label for="set_name">Set Name:</label>
+                        <input type="text" name="set" id="set" required="required">
+                    </div>
+                    <div id="num_question" class="field f_100 ui-resizable-disabled ui-state-disabled">
+                        <label for="num_question"> Number of Questions </label>
+                        <input type="text" name="num_questions" id="num_questions" required="required">
+                        </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
