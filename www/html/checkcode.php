@@ -15,7 +15,7 @@ if ($conn -> connect_error) {
 	die("connection failed:" . $conn -> connect_error);
 }
 
-$sql = "SELECT room_code, set_id FROM set";
+$sql = "SELECT room_code, set_id FROM set_name";
 $result = mysqli_query($conn, $sql);
 
 while($row = mysqli_fetch_array($result)){

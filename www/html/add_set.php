@@ -7,7 +7,7 @@
 
 
 
-start_session();
+session_start();
 
 >>>>>>> origin/master
 $servername = "localhost";

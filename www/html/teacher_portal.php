@@ -1,3 +1,6 @@
+
+<?php session_start(); ?>
+
 <!DOCTYPE HTML>
 <!--
 Minimaxing by HTML5 UP
@@ -16,13 +19,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
 </head>
 <body>
-<?php session_start(); ?>
 <div id="page-wrapper">
     <div id="header-wrapper">
         <div class="container">
             <div class="row">
                 <div class="12u">
-
                     <header id="header">
                         <h1><a href="#" id="logo" class="current-page-item">Teacher Portal</a></h1>
                         <nav id="nav">
@@ -38,30 +39,32 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     </div>
     <div class="container">
         <div class="row">
+            <p>Current Teacher : <?php echo $_SESSION["first_name"]; ?>  </p>
             <div class="6u">
                 <div id="class_insert">
-                    <div id="class_display>
-                        <p>Current Class :   </p>
-                        <?php echo $_SESSION["class_name"]; ?>
+                    <div id="class_display">
+                        <p>Current Class : <?php echo $_SESSION["class_name"]; ?>  </p>
+                        
                     </div>
                     <form action="add_class.php" method="post"
-                          novalidate="">
-                        <div id="class_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
-                            <label for="class"> Class Name: </label>
-                            <input type="text" name="class" id="class" required="required">
-                        </div>
-                        <div id="num_students" class="field f_100 ui-resizable-disabled ui-state-disabled">
-                            <label for="number_students"> Number of Students: </label>
-                            <input type="text" name="number_students" id="number_students" required="required">
-                        </div>
+                    novalidate="">
+                    <div id="class_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
+                        <label for="class"> Class Name: </label>
+                        <input type="text" name="class" id="class" required="required">
+                    </div>
+                    <div id="num_students" class="field f_100 ui-resizable-disabled ui-state-disabled">
+                        <label for="number_students"> Number of Students: </label>
+                        <input type="text" name="number_students" id="number_students" required="required">
+                    </div>
 
-                        <div id="form-submit" class="field f_100 clearfix submit">
-                            <input type="submit" value="Submit">
-                        </div>
+                    <div id="form-submit" class="field f_100 clearfix submit">
+                        <input type="submit" value="Submit">
+                    </div>
                     </form>
                 </div>
             </div>
             <div id="6u">
+                <p>Current Set : <?php echo $_SESSION["set_name"]; ?>  </p>
                 <form action="add_set.php" method="post"
                       novalidate="">
                     <div id="set_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
@@ -85,14 +88,14 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     <div id="question_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
                         <label for="question_name">Question: </label>
                         <input type="text" name="question" id="question" required="required">
-                        </div>
+                    </div>
                     <div id="q_answer" class="field f_100 ui-resizable-disabled ui-state-disabled">
                         <label for="q_answer">Answer: </label>
                         <input type="text" name="answer" id="answer" required="required">
-                        </div>
-                    <div id="q_form_submit"  class="field f_100 clearfix submit">
+                    </div>
+                    <div id="q_form_submit" class="field f_100 clearfix submit">
                         <input type="submit" value="Submit">
-                        </div>
+                    </div>
                 </form>
             </div>
         </div>

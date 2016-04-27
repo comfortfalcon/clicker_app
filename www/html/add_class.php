@@ -8,7 +8,7 @@
 <?php
 
 
-start_session();
+session_start();
 
 
 $servername = "localhost";
