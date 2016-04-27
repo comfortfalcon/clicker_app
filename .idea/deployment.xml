@@ -7,6 +7,9 @@
           <mappings>
             <mapping deploy="/var/www/html" local="$PROJECT_DIR$/www/html" web="/var/www/html" />
           </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/.idea" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>

@@ -15,12 +15,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <!--[if lte IE 9]>
     <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
 </head>
-
-<?php
-
-echo $_SESSION['teacher_id'];
-?>
 <body>
+<?php session_start(); ?>
 <div id="page-wrapper">
     <div id="header-wrapper">
         <div class="container">
@@ -44,6 +40,10 @@ echo $_SESSION['teacher_id'];
         <div class="row">
             <div class="6u">
                 <div id="class_insert">
+                    <div id="class_display>
+                        <p>Current Class :   </p>
+                        <?php echo $_SESSION["class_name"]; ?>
+                    </div>
                     <form action="add_class.php" method="post"
                           novalidate="">
                         <div id="class_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
@@ -54,15 +54,46 @@ echo $_SESSION['teacher_id'];
                             <label for="number_students"> Number of Students: </label>
                             <input type="text" name="number_students" id="number_students" required="required">
                         </div>
-                        <div id="teacher_id" class="field f_100 ui-resizable-disabled ui-state-disabled">
-                            <input type="text" name="teacher_id" id="teacherid" value="<?php echo $_SESSION['teacher_id']; ?> ">
-                        </div>
 
                         <div id="form-submit" class="field f_100 clearfix submit">
                             <input type="submit" value="Submit">
                         </div>
                     </form>
                 </div>
+            </div>
+            <div id="6u">
+                <form action="add_set.php" method="post"
+                      novalidate="">
+                    <div id="set_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
+                        <label for="set_name">Set Name:</label>
+                        <input type="text" name="set" id="set" required="required">
+                    </div>
+                    <div id="num_question" class="field f_100 ui-resizable-disabled ui-state-disabled">
+                        <label for="num_question"> Number of Questions </label>
+                        <input type="number" name="num_questions" id="num_questions" required="required">
+                    </div>
+                    <div id="form_submit" class="field f_100 clearfix submit">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="6u">
+                <form action="add_question.php" method="post"
+                      novalidate="">
+                    <div id="question_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
+                        <label for="question_name">Question: </label>
+                        <input type="text" name="question" id="question" required="required">
+                        </div>
+                    <div id="q_answer" class="field f_100 ui-resizable-disabled ui-state-disabled">
+                        <label for="q_answer">Answer: </label>
+                        <input type="text" name="answer" id="answer" required="required">
+                        </div>
+                    <div id="q_form_submit"  class="field f_100 clearfix submit">
+                        <input type="submit" value="Submit">
+                        </div>
+                </form>
             </div>
         </div>
     </div>
