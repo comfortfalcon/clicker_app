@@ -1,11 +1,8 @@
-/**
- * Created by PhpStorm.
- * User: dks560
- * Date: 4/26/2016
- * Time: 8:25 PM
- */
 
 <?php
+
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
 
 session_start();
 
@@ -22,21 +19,27 @@ if ($conn->connect_error) {
     die("connection failed:" . $conn->connect_error);
 }
 
-$set_name = $_POST['set_name'];
+$set_name = $_POST['set'];
 $set_id = uniqid();
 $class_id = $_SESSION["class_id"];
 $num_questions = $_POST['num_questions'];
+$room_code = 1234;
 
 
 $_SESSION["set_id"] = $set_id;
 
-$sql = "INSERT INTO set(class_id, set_id, set_name, number_questions, room_code) 
-		VALUES ('$class_id', '$set_id', '$set_name', '$num_questions', '' )";
+$sql = "INSERT INTO set_name(class_id, set_id, set_name, number_questions, room_code) 
+		VALUES ('$class_id', '$set_id', '$set_name', '$num_questions', '$room_code')";
 
 if ($conn->query($sql) === TRUE) {
     header("Location:teacher_portal.html");
 } else {
-    header("Location:teacher_portal.html");
+    echo mysql_errno($conn);
+   //header("Location:teacher_portal.html");
+    echo $set_name;
+    echo $set_id;
+    echo $class_id;
+    echo $num_questions;
 }
 
 ?>
