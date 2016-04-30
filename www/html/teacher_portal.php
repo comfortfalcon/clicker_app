@@ -50,17 +50,14 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                                 die();
                             }
                             $query = $mysqli->query("Select class_name from class where teacher_id = '" . $_SESSION["teacher_id"] . "'");
-                            
-                            while($array[] = $query->fetch_object());
-                            array_pop($array);
-                            print_r($array);
                         ?>
                         <h2>Select Class</h2>
                         <select name ="class_select">
-                            <?php foreach($array as $option) : ?>
-                                <option value="<?php echo $option->class_name; ?>"></option>
+                            <?php while($option = $query-> fetch_object()){ ?>
+                                <option> <?php echo $option->class_name; ?></option>
+                        <?php } ?>
                         </select>
-                        <?php endforeach;?>
+
                     </div>
 
                     <form action="add_class.php" method="post"
