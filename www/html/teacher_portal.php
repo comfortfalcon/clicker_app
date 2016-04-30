@@ -44,8 +44,25 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <div id="class_insert">
                     <div id="class_display">
                         <p>Current Class : <?php echo $_SESSION["class_name"]; ?>  </p>
-                        
+                        <?php
+                            $mysqli = new mysqli("localhost", "root", "8XpzkgF85Z", "clicker");
+                            if ($mysqli->connect_error) {
+                                die();
+                            }
+                            $query = $mysqli->query("Select class_name from class where teacher_id = '" . $_SESSION["teacher_id"] . "'");
+                            
+                            while($array[] = $query->fetch_object());
+                            array_pop($array);
+                            print_r($array);
+                        ?>
+                        <h2>Select Class</h2>
+                        <select name ="class_select">
+                            <?php foreach($array as $option) : ?>
+                                <option value="<?php echo $option->class_name; ?>"></option>
+                        </select>
+                        <?php endforeach;?>
                     </div>
+
                     <form action="add_class.php" method="post"
                     novalidate="">
                     <div id="class_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
