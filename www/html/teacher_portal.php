@@ -44,6 +44,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <div id="class_insert">
                     <div id="class_display">
                         <p>Current Class : <?php echo $_SESSION["class_name"]; ?>  </p>
+                        <form name="set_class" method="post" action="set_class.php">
                         <?php
                             $mysqli = new mysqli("localhost", "root", "8XpzkgF85Z", "clicker");
                             if ($mysqli->connect_error) {
@@ -57,7 +58,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                                 <option> <?php echo $option->class_name; ?></option>
                         <?php } ?>
                         </select>
-
+                            <input type="submit" name="class_set" value="set_class"/>
+                            </form>
                     </div>
 
                     <form action="add_class.php" method="post"
