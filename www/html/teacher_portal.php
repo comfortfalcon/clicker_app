@@ -50,12 +50,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                             if ($mysqli->connect_error) {
                                 die();
                             }
-                            $query = $mysqli->query("Select class_name from class where teacher_id = '" . $_SESSION["teacher_id"] . "'");
+                            $query = $mysqli->query("Select class_name, class_id from class where teacher_id = '" . $_SESSION["teacher_id"] . "'");
                         ?>
                         <h2>Select Class</h2>
                         <select name ="class_select">
                             <?php while($option = $query-> fetch_object()){ ?>
-                                <option> <?php echo $option->class_name; ?></option>
+                                <option value="<?php echo $option->class_id; ?>"> <?php echo $option->class_name; ?></option>
                         <?php } ?>
                         </select>
                             <input type="submit" name="class_set" value="set_class"/>
