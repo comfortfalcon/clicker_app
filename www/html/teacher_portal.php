@@ -1,5 +1,7 @@
 
-<?php session_start(); ?>
+<?php session_start(); 
+    
+    ?>
 
 <!DOCTYPE HTML>
 <!--
@@ -80,7 +82,25 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 </div>
             </div>
             <div id="6u">
+                <div id="set_display">
                 <p>Current Set : <?php echo $_SESSION["set_name"]; ?>  </p>
+                    <form name="set_set" method="post" action="set_set.php">
+                        <?php
+                        $mysqli = new mysqli("localhost", "root", "8XpzkgF85Z", "clicker");
+                        if ($mysqli->connect_error) {
+                            die();
+                        }
+                        $query = $mysqli->query("Select set_name, set_id from set_name where class_id = '" . $_SESSION["class_id"] . "'");
+                        ?>
+                        <h2>Select Set</h2>
+                        <select name ="set_select">
+                            <?php while($option = $query-> fetch_object()){ ?>
+                                <option value="<?php echo $option->set_id; ?>"> <?php echo $option->set_name; ?></option>
+                            <?php } ?>
+                        </select>
+                        <input type="submit" name="set_set" value="set_set"/>
+                    </form>
+                    </div>
                 <form action="add_set.php" method="post"
                       novalidate="">
                     <div id="set_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
@@ -117,7 +137,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             </div>
         </div>
     </div>
-</div>
+</div> 
+<?php var_dump($_SESSION); ?>
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/skel.min.js"></script>

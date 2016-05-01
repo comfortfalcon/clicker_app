@@ -3,12 +3,13 @@
  * Created by PhpStorm.
  * User: dks560
  * Date: 5/1/2016
- * Time: 12:46 PM
+ * Time: 3:08 PM
  */
- session_start();
-if (isset($_POST['class_set'])) {
-    $_SESSION["class_id"] = $_POST['class_select'];
-    $class_id = $_SESSION["class_id"];
+
+session_start();
+if (isset($_POST['set_set'])) {
+    $_SESSION["set_id"] = $_POST['set_select'];
+    $set_id = $_SESSION["set_id"];
     $servername = "localhost";
     $username = "root";
     $password = "8XpzkgF85Z";
@@ -22,18 +23,18 @@ if (isset($_POST['class_set'])) {
         die("connection failed:" . $conn->connect_error);
     }
 
-    $sql = "select class_name from class where class_id = '$class_id'";
+    $sql = "select set_name from set_name where set_id = '$set_id'";
 
     $result = mysqli_query($conn, $sql);
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            $_SESSION["class_name"] = $row['class_name'];
+            $_SESSION["set_name"] = $row['set_name'];
         }
     }
     header("Location:teacher_portal.php");
-    
+
 } else {
-    
+
     echo "didn't work";
 }
