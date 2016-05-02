@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "8XpzkgF85Z";
@@ -12,8 +13,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn -> connect_error) {
     die("connection failed:" . $conn -> connect_error);
 }
+$_SESSION["room_code"] = $random;
 
-$sql = "UPDATE set_name SET roomcode='" . $random . "' WHERE set_id='" . $_SESSION['set_id'] ."'";
+$sql = "UPDATE set_name SET room_code='$random' WHERE set_id='" . $_SESSION['set_id'] ."'";
+//echo $sql;
 $result = mysqli_query($conn, $sql);
 
 $conn->close();

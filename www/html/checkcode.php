@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $servername = "localhost";
 $username = "root";
 $password = "8XpzkgF85Z";
@@ -21,9 +23,13 @@ $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_array($result)){
 	if($row['room_code'] == $roomcode){
 		echo $row['set_id'];
-		header("Location:clicker.html");
+		header("Location:clicker.php");
 	}
 }
+
+$_SESSION["room_code"] = $roomcode;
+$_SESSION["nickname"] = $nickname;
+
 echo $roomcode;
 echo $nickname;
 ?>

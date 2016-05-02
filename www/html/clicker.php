@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,8 +57,9 @@
 	</table>
 	
 	<form method="post" action="submit.php">
+<input type="text" value="<?php echo $_SESSION["room_code"]; ?>">
 <input type="text" id="answer">
-<input type="submit" value=" Submit " />
+<input type="submit" value="Submit" />
     </form>
     
     </nav>
@@ -74,6 +79,21 @@ button {
 <script>
 function setVariable(a) {
 	document.getElementById('answer').value = a;
+}
+function setVariable(b) {
+	document.getElementById('answer').value = b;
+}
+function setVariable(c) {
+	document.getElementById('answer').value = c;
+}
+function setVariable(d) {
+	document.getElementById('answer').value = d;
+}
+function setVariable(e) {
+	document.getElementById('answer').value = e;
+}
+function setVariable(f) {
+	document.getElementById('answer').value = f;
 }
 </script>
 </html>

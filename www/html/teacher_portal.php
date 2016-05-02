@@ -133,7 +133,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <input type="submit" value="Submit">
                     </div>
                 </form>
-                <button onclick="makeid()">Start Session</button>
+                <button onclick="make_id()">Start Session</button>
             </div>
         </div>
     </div>
@@ -148,7 +148,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
 <script>
-    function makeid()
+    function make_id()
     {
         var text = "";
         var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
