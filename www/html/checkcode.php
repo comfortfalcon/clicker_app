@@ -26,6 +26,7 @@ if ($result_1->num_rows > 0) {
         $result_array[] = $row;
     }
     $_SESSION['set'] = $result_array;
+    $_SESSION['cur_q'] = 0;
     header("Location:clicker.php");
 } else {
     

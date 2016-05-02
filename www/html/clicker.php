@@ -1,7 +1,10 @@
 <?php
 session_start();
 $question_array = $_SESSION['set'];
-//echo '<pre>' . var_export($temp_array, true) . '</pre>';
+echo '<pre>' . var_export($question_array, true) . '</pre>';
+
+echo count($question_array);
+
 ?>
 
 <!DOCTYPE html>
@@ -27,36 +30,37 @@ $question_array = $_SESSION['set'];
 <body>
 <div>
     <header>
-        <h1>Submit answers to questions</h1>
+        <h1><?php echo $question_array[$cur_q][3] ?> </h1>
     </header>
     <nav>
         <p><a href="/">Home</a></p>
         <table>
             <tr>
                 <td>
-                    <button onclick="window.location.href='select_a.php'">A</button>
+                    <button onclick="window.location.href='select_php/select_a.php'">A</button>
                 </td>
                 <td>
-                    <button onclick="window.location.href='select_b.php'">B</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button onclick="window.location.href='select_c.php'">C</button>
-                </td>
-                <td>
-                    <button onclick="window.location.href='select_d.php'">D</button>
+                    <button onclick="window.location.href='select_php/select_b.php'">B</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button onclick="window.location.href='select_e.php'">E</button>
+                    <button onclick="window.location.href='select_php/select_c.php'">C</button>
                 </td>
                 <td>
-                    <button onclick="window.location.href='select_f.php'">F</button>
+                    <button onclick="window.location.href='select_php/select_d.php'">D</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="window.location.href='select_php/select_e.php'">E</button>
+                </td>
+                <td>
+                    <button onclick="window.location.href='select_php/select_f.php'">F</button>
                 </td>
             </tr>
         </table>
+                    <button onclick="window.location.href='select_php/next_question.php'">Next Question</button>
 
     </nav>
 
