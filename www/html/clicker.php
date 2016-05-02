@@ -4,6 +4,7 @@ $question_array = $_SESSION['set'];
 echo '<pre>' . var_export($question_array, true) . '</pre>';
 
 echo count($question_array);
+echo $question_array[0][2];
 
 ?>
 

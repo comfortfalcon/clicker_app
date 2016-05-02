@@ -27,8 +27,8 @@ $answer = $_POST['answer'];
 $_SESSION["question_id"] = $question_id;
 
 
-$sql = "INSERT INTO question(question_id, set_id, question, answer) 
-		VALUES ('$question_id', '$set_id', '$question', '$answer' )";
+$sql = "INSERT INTO question(question_id, set_id, question, answer, A, B, C, D, E, F) 
+		VALUES ('$question_id', '$set_id', '$question', '$answer', 0, 0, 0, 0, 0, 0 )";
 
 if ($conn->query($sql) === TRUE) {
     header("Location:teacher_portal.php");

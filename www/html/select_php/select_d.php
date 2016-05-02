@@ -16,3 +16,5 @@ $dbname = "clicker";
 //create new connection
 
 $conn = new mysqli($servername, $username, $password, $dbname);
+
+$sql = "UPDATE question SET D = D + 1 WHERE question_id = '$question_id' ";

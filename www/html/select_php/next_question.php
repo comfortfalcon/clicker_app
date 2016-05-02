@@ -12,10 +12,10 @@ session_start();
 
 $temp_array = $_SESSION['set'];
 if(count($temp_array) ===  0) {
-    header("Location:../index.html");
+    header("Location: ../index.html");
 }
 unset($temp_array[0]);
 $final_array = array_values($temp_array);
 $_SESSION['set'] = $final_array;
 
-header("Location:../clicker.php");
+header("Location: ../clicker.php");
