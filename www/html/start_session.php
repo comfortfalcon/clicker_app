@@ -19,6 +19,8 @@ $sql = "UPDATE set_name SET room_code='$random' WHERE set_id='" . $_SESSION['set
 //echo $sql;
 $result = mysqli_query($conn, $sql);
 
+
+
 $conn->close();
 
 header("Location:teacher_session.php");
