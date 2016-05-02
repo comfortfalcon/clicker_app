@@ -8,10 +8,10 @@
 
 session_start();
 
-//echo '<pre>' . var_export($_SESSION, true) . '</pre>';
+echo '<pre>' . var_export($_SESSION, true) . '</pre>';
 
 $temp_array = $_SESSION['set'];
-if(count($temp_array) ===  0) {
+if(!count($temp_array) >  0) {
     header("Location: ../index.html");
 }
 unset($temp_array[0]);
