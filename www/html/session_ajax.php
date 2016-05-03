@@ -27,3 +27,4 @@ while ($row = mysqli_fetch_row($result)) {
     $question_data[] = $row;
 }
 echo json_encode($question_data);
+

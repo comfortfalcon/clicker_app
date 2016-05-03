@@ -17,8 +17,12 @@ $dbname = "clicker";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+$temp_array = $_SESSION['set'];
+$question_id = $temp_array[0][2];
+
 $sql = "UPDATE question SET D = D + 1 WHERE question_id = '$question_id' ";
 
 mysqli_query($conn, $sql);
 
 header("Location:next_question.php");
+

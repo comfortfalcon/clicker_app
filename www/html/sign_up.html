@@ -1,65 +1,75 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Sign up</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<head>
+    <title>Sign up</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
-	<body>
-	<nav class="navbar navbar-default navbar-static-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<ul class="nav navbar-nav">
-					<li><a href="index.html">Home</a></li>
-					<li class="active"><a href="login.html">Login</a></li>
-					<li><a href="sign_up.html">Sign Up</a></li>
-					<li><a href="portal.html">Student Portal</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-4 col-lg-offset-4">
-					<form action="add_teacher.php"  method="post"
-					novalidate="" class="form-horizontal">
-						<div id="fname-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-							<label for="firstname"> First Name </label>
-							<input type="text" name="firstname" id="firstname" required="required">
-						</div>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li class="active"><a href="sign_up.html">Sign Up</a></li>
+                <li><a href="portal.html">Student Portal</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4">
+            <h2>Please Create Account:</h2>
+            <form action="add_teacher.php" method="post"
+                  novalidate="" class="form-horizontal">
+                <div class="form-group">
+                    <label for="firstname" class="col-sm-2 control-label"> First Name </label>
+                    <div class="col-sm-10">
+                        <input type="text" name="firstname" id="firstname" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
 
-						<div id="lname-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-							<label for="lastname"> Last Name </label>
-							<input type="text" name="lastname" id="lastname" required="required">
-						</div>
+                    <label for="lastname" class="col-sm-2 control-label"> Last Name </label>
+                    <div class="col-sm-10">
+                        <input type="text" name="lastname" id="lastname" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject" class="col-sm-2 control-label"> Subject </label>
+                    <div class="col-sm-10">
+                        <input type="text" name="subject" id="subject" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label"> Email </label>
+                    <div class="col-sm-10">
+                        <input type="text" name="email" id="email" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label"> Password </label>
+                    <div class="col-sm-10">
+                        <input type="text" name="password" id="password" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <input type="submit" class="btn btn-default" value="Submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
-						<div id="class-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-							<label for="subject"> Subject </label>
-							<input type="text" name="subject" id="subject" required="required">
-						</div>
 
-						<div id="email-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-							<label for="email"> Email </label>
-							<input type="text" name="email" id="email" required="required">
-						</div>
-
-						<div id="field5-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-							<label for="password"> Password </label>
-							<input type="text" name="password" id="password" required="required">
-						</div>
-						<div id="form-submit" class="field f_100 clearfix submit">
-							<input type="submit" value="Submit">
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-
-
-		<!-- Scripts -->
-					<script src="js/bootstrap.min.js"></script>
-					<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	</body>
+<!-- Scripts -->
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
 </html>
