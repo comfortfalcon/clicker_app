@@ -1,73 +1,57 @@
 <!DOCTYPE HTML>
-<!--
-	Minimaxing by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
-	<head>
-		<title>Three Column - Minimaxing by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body>
-		<div id="page-wrapper">
-			<div id="header-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="12u">
-
-							<header id="header">
-								<h1><a href="#" id="logo">Clicker App</a></h1>
-								<nav id="nav">
-									<a href="index.html">Homepage</a>
-									<a href="login.html">Login</a>
-									<a href="sign_up.html">Sign up</a>
-									<a href="portal.html">Student Portal</a>
-								</nav>
-							</header>
-
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="main">
-				<div class="orm-container">
-					<form action="checkcode.php"  method="post"
-					novalidate="">
-						<div id="roomcode-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-							<label for="room_code"> Enter Room Code: </label>
-							<input type="text" name="roomcode" id="roomcode" required="required">
-						</div>
-
-						<div id="nickname-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-							<label for="nick_name"> Nick Name: </label>
-							<input type="text" name="nickname" id="nickname" required="required">
-						</div>
-						<div id="form-submit" class="field f_100 clearfix submit">
-							<input type="submit" value="Submit">
-						</div>
-			</div>
-							<div id="copyright">
-								&copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
+<head>
+	<title>Student Portal</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="sign_up.html">Sign Up</a></li>
+				<li class="active"><a href="portal.html">Student Portal</a></li>
+			</ul>
 		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-4 col-lg-offset-4">
+			<h2>Connect to your class:</h2>
+			<form class="form-horizontal" action="checkcode.php" method="post"
+				  novalidate="">
+				<div class="form-group">
+					<label for="room_code" class="col-sm-2 control-label"> Room Code: </label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" name="room_code" id="room_code" required="required" placeholder="room code">
+					</div>
+				</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/skel-viewport.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+				<div class="form-group">
+					<label for="nick_name" class="col-sm-2 control-label"> Nick Name: </label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" name="nick_name" id="nick_name" required="required" placeholder="nick name">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<input type="submit" class="btn btn-default" value="Submit">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
 
-	</body>
+<!-- Scripts -->
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
 </html>
