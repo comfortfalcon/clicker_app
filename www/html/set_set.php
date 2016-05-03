@@ -32,6 +32,10 @@ if (isset($_POST['set_set'])) {
             $_SESSION["set_name"] = $row['set_name'];
         }
     }
+    echo '<pre>' . var_export($_POST, true) . '</pre>';
+    echo '<pre>' . var_export($_SESSION, true) . '</pre>';
+
+
     header("Location:teacher_portal.php");
 
 } else {

@@ -19,15 +19,25 @@ if ($conn -> connect_error) {
 
 $sql_1 = "SELECT room_code, set_id FROM set_name WHERE room_code = '$roomcode'";
 $result_1 = mysqli_query($conn, $sql_1);
+
+
 if ($result_1->num_rows > 0) {
-    $array_sql= "select s.set_name, s.number_questions, q.question_id, q.question, q.answer  from set_name s JOIN question q on q.set_id = q.set_id WHERE s.room_code = '$roomcode'";
+    $array_sql= "select s.set_name, s.number_questions, q.question_id, q.question, q.answer  from set_name s JOIN question q on q.set_id = s.set_id WHERE s.room_code = '$roomcode'";
     $result = mysqli_query($conn, $array_sql);
     while($row = mysqli_fetch_array($result)) {
         $result_array[] = $row;
     }
     $_SESSION['set'] = $result_array;
     $_SESSION['cur_q'] = 0;
-    header("Location:clicker.php");
+    
+    //var_dump($_SESSION);
+   // var_dump($result_array);
+    echo '<pre>' . var_export($_SESSION, true) . '</pre>';
+
+    echo '<pre>' . var_export($result_array, true) . '</pre>';
+
+
+     header("Location:clicker.php");
 } else {
     
     header("Location:portal.html");
