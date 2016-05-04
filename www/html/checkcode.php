@@ -17,9 +17,8 @@ if ($conn -> connect_error) {
 	die("connection failed:" . $conn -> connect_error);
 }
 
-$sql_1 = "SELECT room_code, set_id FROM set_name WHERE room_code = '$roomcode'";
+$sql_1 = "SELECT room_code,set_name, set_id FROM set_name WHERE room_code = '$roomcode'";
 $result_1 = mysqli_query($conn, $sql_1);
-
 
 if ($result_1->num_rows > 0) {
     $array_sql= "select s.set_name, s.number_questions, q.question_id, q.question, q.answer  from set_name s JOIN question q on q.set_id = s.set_id WHERE s.room_code = '$roomcode'";

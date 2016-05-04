@@ -1,6 +1,6 @@
 <?php
 session_start();
-echo '<pre>' . var_export($_SESSION, true) . '</pre>';
+//echo '<pre>' . var_export($_SESSION, true) . '</pre>';
 
 ?>
 
@@ -16,8 +16,7 @@ echo '<pre>' . var_export($_SESSION, true) . '</pre>';
 <body>
 
 <h1>User Answers</h1>
-<div id="output">this will be replaced</div>
-
+<h2>Room Number = <?php echo $_SESSION['room_code']?></h2>
 <table class="table table-bordered">
     <tr class="records">
         <thead>
@@ -36,6 +35,8 @@ echo '<pre>' . var_export($_SESSION, true) . '</pre>';
         </tbody>
 </table>
     </tr>
+
+
 
 <script>
 

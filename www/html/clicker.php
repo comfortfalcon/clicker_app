@@ -1,10 +1,10 @@
 <?php
 session_start();
 $question_array = $_SESSION['set'];
-echo '<pre>' . var_export($question_array, true) . '</pre>';
+//echo '<pre>' . var_export($question_array, true) . '</pre>';
 
-echo count($question_array);
-echo $question_array[0][2];
+//echo count($question_array);
+// $question_array[0][2];
 
 ?>
 
