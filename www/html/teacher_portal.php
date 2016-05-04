@@ -21,28 +21,23 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 </head>
 <body>
 <div id="page-wrapper">
-    <div id="header-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="12u">
-                    <header id="header">
-                        <h1><a href="#" id="logo" class="current-page-item">Teacher Portal</a></h1>
-                        <nav id="nav">
-                            <a href="index.html">Homepage</a>
-                            <a href="login.html">Login</a>
-                            <a href="sign_up.html">Sign up</a>
-                            <a href="portal.html">Student Portal</a>
-                        </nav>
-                    </header>
-                </div>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="login.html">Login</a></li>
+                    <li><a href="sign_up.html">Sign Up</a></li>
+                    <li><a href="portal.html">Student Portal</a></li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
+    
     <div class="container">
         <div class="row">
+            <div id="col-sm-4">
             <p>Current Teacher : <?php echo $_SESSION["first_name"]; ?>  </p>
-            <div class="6u">
-                <div id="class_insert">
                     <div id="class_display">
                         <p>Current Class : <?php echo $_SESSION["class_name"]; ?>  </p>
                         <form name="set_class" method="post" action="set_class.php">
@@ -62,7 +57,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                             <input type="submit" name="class_set" value="set_class"/>
                             </form>
                     </div>
-                    <div class="col-sm-4">
+                    
                     <form action="add_class.php" method="post"
                     novalidate="">
                     <div id="class_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
@@ -78,10 +73,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <input type="submit" value="Submit">
                     </div>
                     </form>
-                    </div>
+                    
                 </div>
-            </div>
-            <div id="6u">
+            
+            <div id="col-sm-4">
                 <div id="set_display">
                 <p>Current Set : <?php echo $_SESSION["set_name"]; ?>  </p>
                     <form name="set_set" method="post" action="set_set.php">
@@ -102,7 +97,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     </form>
                     </div>
 
-                <div class="col-sm-4">
+                
                 <form action="add_set.php" method="post"
                       novalidate="">
                     <div id="set_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
@@ -117,12 +112,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <input type="submit" value="Submit">
                     </div>
                 </form>
-                    </div>
+                    
             </div>
-        </div>
-        <div class="row">
-            <div class="6u">
-                <div class="col-sm-4">
+        
+        
+            <div class="col-sm-4">
+                
                 <form action="add_question.php" method="post"
                       novalidate="">
                     <div id="question_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
