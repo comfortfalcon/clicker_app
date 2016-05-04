@@ -35,26 +35,37 @@ echo $question_array[0][2];
     </header>
     <div class="container">
     <nav>
-        <p><a href="/">Home</a></p>
-
-                    <button class="btn btn-info" onclick="window.location.href='select_php/select_a.php'">A</button>
-
-                    <button class="btn btn-info" onclick="window.location.href='select_php/select_b.php'">B</button>
-                    <br>
-                    <br>
-                    <button class="btn btn-info" onclick="window.location.href='select_php/select_c.php'">C</button>
-
-                    <button class="btn btn-info" onclick="window.location.href='select_php/select_d.php'">D</button>
-                    <br>
-                    <br>
-                    <button class="btn btn-info" onclick="window.location.href='select_php/select_e.php'">E</button>
-
-                    <button class="btn btn-info" onclick="window.location.href='select_php/select_f.php'">F</button>
-                    <br>
-                    <br>
-                    <button class="btn btn-info" onclick="window.location.href='select_php/next_question.php'">Next Question</button>
-
+        
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <div class="col-sm-10">
+                <p><a href="/">Home</a></p>
+                </div>
+                <div class="col-sm-10">
+                    <p><b>Submit answers to questions</b></p>
+                </div>
+        <div class="col-sm-10">
+                    <button class="btn btn-info btn-lg" onclick="window.location.href='select_php/select_a.php'">A</button>
+        
+                
+                    <button class="btn btn-info btn-lg" onclick="window.location.href='select_php/select_b.php'">B</button>
+                    
+                
+                    <button class="btn btn-info btn-lg" onclick="window.location.href='select_php/select_c.php'">C</button>
+        </div>
+                <div class="col-sm-10">
+                    <button class="btn btn-info btn-lg" onclick="window.location.href='select_php/select_d.php'">D</button>
+                    
+                    <button class="btn btn-info btn-lg" onclick="window.location.href='select_php/select_e.php'">E</button>
+                
+                    <button class="btn btn-info btn-lg" onclick="window.location.href='select_php/select_f.php'">F</button>
+                </div>
+                <div class="col-sm-10">
+                    <button class="btn btn-info btn-lg" onclick="window.location.href='select_php/next_question.php'">Next Question</button>
+                </div>
+            </div>
     </nav>
+        </div>
     </div>
 
     <div>

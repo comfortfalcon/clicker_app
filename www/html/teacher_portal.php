@@ -74,9 +74,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     </div>
                     </form>
                     
-                </div>
+                
             
-            <div id="col-sm-4">
+            
                 <div id="set_display">
                 <p>Current Set : <?php echo $_SESSION["set_name"]; ?>  </p>
                     <form name="set_set" method="post" action="set_set.php">
@@ -113,13 +113,14 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     </div>
                 </form>
                     
-            </div>
+            
         
         
-            <div class="col-sm-4">
+            
                 
                 <form action="add_question.php" method="post"
                       novalidate="">
+                    <h2>Add Question</h2>
                     <div id="question_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
                         <label for="question_name">Question: </label>
                         <input type="text" name="question" id="question" required="required">
@@ -133,7 +134,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     </div>
                 </form>
                 <button onclick="make_id()">Start Session</button>
-                    </div>
+            </div>
             </div>
         </div>
     </div>
