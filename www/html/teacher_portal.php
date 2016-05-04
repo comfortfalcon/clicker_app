@@ -16,9 +16,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!--[if lte IE 8]>
     <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="assets/css/main.css"/>
-    <!--[if lte IE 9]>
-    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 </head>
 <body>
 <div id="page-wrapper">
@@ -63,7 +62,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                             <input type="submit" name="class_set" value="set_class"/>
                             </form>
                     </div>
-
+                    <div class="col-sm-4">
                     <form action="add_class.php" method="post"
                     novalidate="">
                     <div id="class_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
@@ -79,6 +78,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <input type="submit" value="Submit">
                     </div>
                     </form>
+                    </div>
                 </div>
             </div>
             <div id="6u">
@@ -101,6 +101,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <input type="submit" name="set_set" value="set_set"/>
                     </form>
                     </div>
+
+                <div class="col-sm-4">
                 <form action="add_set.php" method="post"
                       novalidate="">
                     <div id="set_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
@@ -115,10 +117,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <input type="submit" value="Submit">
                     </div>
                 </form>
+                    </div>
             </div>
         </div>
         <div class="row">
             <div class="6u">
+                <div class="col-sm-4">
                 <form action="add_question.php" method="post"
                       novalidate="">
                     <div id="question_name" class="field f_100 ui-resizable-disabled ui-state-disabled">
@@ -134,6 +138,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     </div>
                 </form>
                 <button onclick="make_id()">Start Session</button>
+                    </div>
             </div>
         </div>
     </div>
@@ -147,6 +152,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <!--[if lte IE 8]>
 <script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
     function make_id()
     {
