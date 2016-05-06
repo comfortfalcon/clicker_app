@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1997430502">
+  <component name="DataSourceManagerImpl" format="xml" hash="2426465866">
     <data-source source="LOCAL" name="Clicker Database Connection" uuid="32d91e95-8333-4932-afaf-fb29018c2957">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
